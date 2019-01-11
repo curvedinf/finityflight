@@ -1,4 +1,4 @@
-# finityflight 1.3
+# finityflight
 2D aircraft shooter for the MirthKit game platform
 
 ## How to run
