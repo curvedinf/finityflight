@@ -203,7 +203,7 @@ function level4()
 	::options.gunsUnlocked = 2;
 		
 	local level = Level();
-	level.scoreKeeper.parScore = 15000;
+	level.scoreKeeper.parScore = 70000;
 	local spawner = level.enemySpawner;
 	
 	level.helpFunction = level4HelpFunction;
@@ -214,26 +214,35 @@ function level4()
 
 	
 	spawner.addEnemyToWave(0, 3.0, 1, "Hoplite", 0);
-	spawner.addEnemyToWave(0, 6.0, 5, "Regulus", 0);
+	spawner.addEnemyToWave(0, 3.0, 5, "Regulus", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(1, 3.0, 2, "Regulus", 0);
+	spawner.addEnemyToWave(1, 3.0, 10, "Regulus", 0);
 	spawner.addEnemyToWave(1, 3.0, 2, "Naiad", 1);
+	spawner.addEnemyToWave(1, 6.0, 1, "Hoplite", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(2, 3.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(2, 3.0, 2, "Regulus", 1);
-	spawner.addEnemyToWave(2, 3.0, 2, "Regulus", 0);
+	spawner.addEnemyToWave(2, 3.0, 1, "Hoplite", 0);
+	spawner.addEnemyToWave(2, 3.0, 5, "Naiad", 0);
+	spawner.addEnemyToWave(2, 13.0, 1, "Hoplite", 0);
+	spawner.addEnemyToWave(2, 13.0, 5, "Naiad", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(3, 3.0, 3, "Regulus", 0);
-	spawner.addEnemyToWave(3, 3.0, 2, "Regulus", 0);
-	spawner.addEnemyToWave(3, 8.0, 1, "Naiad", 0);
+	spawner.addEnemyToWave(3, 3.0, 1, "Hoplite", 0);
+	spawner.addEnemyToWave(3, 3.0, 20, "Regulus", 0);
+	spawner.addEnemyToWave(3, 8.0, 1, "Hoplite", 0);
+	spawner.addEnemyToWave(3, 10.0, 20, "Regulus", 0);
+	spawner.addEnemyToWave(3, 15.0, 1, "Hoplite", 0);
+	spawner.addEnemyToWave(3, 18.0, 20, "Regulus", 0);
+	spawner.addEnemyToWave(3, 22.0, 10, "Regulus", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(4, 2.0, 1, "Hoplite", 0);
-	spawner.addEnemyToWave(4, 3.0, 3, "Regulus", 0);
-	spawner.addEnemyToWave(4, 3.0, 3, "Regulus", 1);
+	spawner.addEnemyToWave(4, 3.0, 3, "Hoplite", 0);
+	spawner.addEnemyToWave(4, 3.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(4, 6.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(4, 9.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(4, 12.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(4, 15.0, 2, "Naiad", 0);
 	
 	return level;
 }

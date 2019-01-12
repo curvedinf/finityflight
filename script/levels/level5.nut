@@ -150,7 +150,7 @@ function level5()
 {
 	::options.gunsUnlocked = 3;
 	local level = Level();
-	level.scoreKeeper.parScore = 12000;
+	level.scoreKeeper.parScore = 40000;
 	local spawner = level.enemySpawner;
 	
 	level.helpFunction = level5HelpFunction;
@@ -159,32 +159,22 @@ function level5()
 	level.endFunction = level5EndFunction;
 	
 
-	spawner.addEnemyToWave(0, 3.0, 2, "Regulus", 0);
-	spawner.addEnemyToWave(0, 3.0, 1, "Regulus", 1);
-	spawner.addEnemyToWave(0, 4.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(0, 3.0, 5, "Regulus", 2);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(1, 3.0, 3, "Regulus", 0);
-	spawner.addEnemyToWave(1, 3.0, 1, "Hoplite", 0);
-	spawner.addEnemyToWave(1, 6.0, 2, "Regulus", 1);
+	spawner.addEnemyToWave(1, 3.0, 5, "Regulus", 2);
+	spawner.addEnemyToWave(1, 8.0, 10, "Regulus", 0);
+	spawner.addEnemyToWave(1, 14.0, 10, "Regulus", 0);
+	spawner.addEnemyToWave(1, 20.0, 10, "Regulus", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(2, 3.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(2, 7.0, 2, "Naiad", 0);
+	spawner.addEnemyToWave(2, 3.0, 2, "Hoplite", 0);
+	spawner.addEnemyToWave(2, 3.0, 5, "Regulus", 2);
+	spawner.addEnemyToWave(2, 10.0, 3, "Naiad", 0);
 	
 	spawner.waves.append([]);
-	spawner.addEnemyToWave(3, 2.0, 2, "Naiad", 0);
-	
-	spawner.waves.append([]);
-	spawner.addEnemyToWave(4, 3.0, 3, "Naiad", 0);
-	
-	spawner.waves.append([]);
-	spawner.addEnemyToWave(5, 3.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(5, 3.0, 1, "Hoplite", 0);
-	spawner.addEnemyToWave(5, 7.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(5, 11.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(5, 15.0, 1, "Naiad", 0);
-	spawner.addEnemyToWave(5, 19.0, 1, "Naiad", 1);
+	spawner.addEnemyToWave(3, 3.0, 5, "Regulus", 2);
+	spawner.addEnemyToWave(3, 8.0, 5, "Regulus", 2);
 	
 	return level;
 }

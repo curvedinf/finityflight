@@ -236,11 +236,22 @@ class EnemySpawner
 			ship.mods[1]["ship"].color = [1.0, 0.45, 0.45, 1.0];
 			thrustHue = 239;
 			ship.mods[1]["ship"].typeID = "Super Regulus";
-			ship.mods[1]["ship"].scoreAmount = 150;
-			ship.mods[1]["ship"].health = 50;
-			ship.mods[1]["ship"].originalHealth = 50;
+			ship.mods[1]["ship"].scoreAmount = 1000;
+			ship.mods[1]["ship"].health = 200;
+			ship.mods[1]["ship"].originalHealth = 200;
 			ship.mods[0]["pilot"].timeBetweenFireMin = 1.5;
 			ship.mods[0]["pilot"].timeBetweenFireMax = 3.0;
+		}
+		if (subtype == 3)
+		{
+			ship.mods[1]["ship"].color = [0.1, 0.1, 0.1, 1.0];
+			thrustHue = 239;
+			ship.mods[1]["ship"].typeID = "Ultra Regulus";
+			ship.mods[1]["ship"].scoreAmount = 10000;
+			ship.mods[1]["ship"].health = 2000;
+			ship.mods[1]["ship"].originalHealth = 2000;
+			ship.mods[0]["pilot"].timeBetweenFireMin = 0.5;
+			ship.mods[0]["pilot"].timeBetweenFireMax = 1.0;
 		}
 		
 		ship.addMod(Thruster("thruster1",0,20,0.6,0,0.3),2);
@@ -267,6 +278,16 @@ class EnemySpawner
 		
 		ship.mods[1]["ship"].typeID = "Naiad";
 		ship.mods[1]["ship"].scoreAmount = 150;
+		
+		if (subtype == 2)
+		{
+			ship.mods[1]["ship"].color = [1.0, 0.45, 0.45, 1.0];
+			thrustHue = 239;
+			ship.mods[1]["ship"].typeID = "Super Naiad";
+			ship.mods[1]["ship"].scoreAmount = 300;
+			ship.mods[1]["ship"].health = 100;
+			ship.mods[1]["ship"].originalHealth = 100;
+		}
 		
 		ship.addMod(Streamer("streamer1",25,0,1,4),2);
 		ship.addMod(Streamer("streamer2",-25,0,1,4),2);

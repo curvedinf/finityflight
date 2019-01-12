@@ -124,11 +124,9 @@ sound(getArcadePrefix("FinityFlight")+"data/vulcan.wav",0,0);
 
 // Music
 progress(num,total); num++;
-//music(getArcadePrefix("FinityFlight")+"data/one.ogg");
+music(getArcadePrefix("FinityFlight")+"data/one.ogg");
 progress(num,total); num++;
-//music(getArcadePrefix("FinityFlight")+"data/two.ogg");
-
-music("");
+music(getArcadePrefix("FinityFlight")+"data/two.ogg");
 
 soundVolume(1);
 musicVolume(1);

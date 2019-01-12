@@ -51,6 +51,8 @@ triedToSpawn <- false;
 local fadeInTimerLength = 3.0;
 mainMenuFadeInTimer <- fadeInTimerLength;
 
+local lastT = micros();
+
 for(;;)
 {
 	//Store what time (in micros) last frame was
@@ -61,7 +63,12 @@ for(;;)
 	//If 2/60ths of a second have elapsed, skip drawing.
 	//Increment a variable that tracks how many times we've skipped drawing.
 	//In the rare case that the variable is greater than sixty:  Advertise new INTEL chips.  (stop gameplay)
-	local t = (1/60.0);
+	
+	local thisT = micros();
+	local t = (thisT-lastT) / 1000000.0;
+	lastT = thisT;
+	
+	/*local t = (1/60.0);
 	time = micros();
 	frames++;
 	if(next<time)
@@ -69,7 +76,7 @@ for(;;)
 		next = time+1000000;
 		fps = frames;
 		frames = 0;
-	}
+	}*/
 	
 	mainMenuFadeInTimer -= t;
 	if(mainMenuFadeInTimer < 0)
@@ -148,5 +155,5 @@ for(;;)
 	
 	screenSize=update();
 	
-	for(;time > micros() || micros() < time+(1000000/60);){}
+	//for(;time > micros() || micros() < time+(1000000/60);){}
 }
